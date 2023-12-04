@@ -1,0 +1,311 @@
+:root {
+  --highlight:#FFF;
+  --shadow:#000;
+  --midtone:#555;
+  --curved:border-radius: 30px;
+}
+
+body {
+  font-family: "panel-mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  background-color: var(--shadow);
+  color: var(--highlight);
+ /* padding: 1em; */
+  display: block;
+}
+
+#header-strip {
+ background-image: url("dark-teal-bg.jpg");
+  background-color: var(--shadow);
+  width: 100%;
+  padding: 1em;
+  display: inline-block;
+}
+
+h1 {
+  display: block;
+  font-size: 1.25em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+h2 {
+  display: block;
+  font-size: 1.25em;
+  text-align: center;
+  margin-top: 1em;
+  font-weight: 400;
+}
+
+#smaller {
+  font-size: 1.25em;
+  margin: 10px;
+}
+
+p, a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .8em;
+  margin: 2em;
+  text-align: center;
+  line-height: 1.8em;
+  vertical-align: center;
+}
+
+/*anchor tags*/
+
+/* unvisited link */
+a:link {
+  color: cyan;
+}
+/* visited link */
+a:visited {
+  color: plum;
+}
+/* mouse over link */
+a:hover {
+  color: white;
+  font-weight: 500;
+}
+/* selected link */
+a:active {
+  color: white;
+  font-weight: 500;
+}
+
+.italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fancy {
+  font-family: "ganache", sans-serif;
+  font-size: 250%;
+}
+
+img {
+  display: block;
+  margin: 1em auto;
+}
+
+
+header {
+  background: var(--midtone);
+  display: flex;
+  width: 100%;
+}
+
+#nav1 {
+  background-color: var(--midtone);
+  background-image: url("universe-bg.JPG");
+  flex:1;
+  border: 1px;
+  padding: .75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#nav1 section {
+  flex: 1;
+  background-color: var(--shadow);
+  border-color: var(--highlight);
+  border: 1px solid var(--highlight);
+  margin-bottom: 1em;
+  align-content: center;
+  width: 80%;
+}
+section#web-dev, section#automation {
+  background-image: url(brainHemispheres-gray-left.png);
+  background-position: 20em;
+  background-repeat: no-repeat;
+  background-size: 2em;
+}
+
+  section#design, section#art {
+  background-image: url(brainHemispheres-color-right.png);
+  background-position: 5em;
+  background-repeat: no-repeat;
+  background-size: 2em;
+}
+
+section.nav-portfolio {
+  flex: 1;
+  min-height: 4em;
+  /*border-color: var(--highlight);
+  border-style: dashed;
+  border-width: 1px;*/
+}
+
+#nav1 a {
+  color: var(--highlight);
+  font-size: 110%;
+  padding: 1.5em 2em;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #fff;
+}
+
+section#hero {
+  flex:2;
+  display: flex;
+  align-items: center;
+  background-image: url("black-bg.jpg");
+}
+
+div.brain {
+  flex: 1;
+}
+
+#my-avatar {
+  flex:1;
+  height: 348 px;
+  width: 300 px;
+  background-image: url('profile-pic-composite-300.jpg');
+  background-repeat: no-repeat;
+}
+
+div#my-avatar img {
+opacity: 0;
+}
+
+div.brain p{
+vertical-align: middle;
+}
+
+div#right.brain:hover + div#my-avatar {
+  background-image: url('profile-pic-creative-300.jpg');
+}
+
+div#left.brain:hover ~ div#my-avatar {
+  background-image: url('profile-pic-tech-300.jpg');
+}
+
+#link-strip {
+  display:block;
+  background-image: url("dark-teal-bg.jpg");
+}
+
+#link-strip ul {
+  padding: 1em;
+}
+
+#link-strip li {
+  display: inline;
+  margin: 0 2em;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+div#learn-more {
+
+}
+
+div#portfolio {
+display:grid;
+grid-template-areas: 
+        "tech1 creative1"
+        "tech2 creative2";
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+}
+
+div#portfolio section {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid var(--highlight);
+  min-height: 3em;
+  background-image: url("universe-bg.JPG");
+  display: flexbox;
+}
+
+div.mywork {
+  display:flexbox;
+  Justify-content: space-between;
+}
+
+div.feature {
+  width:100%;
+  border: 1px solid var(--midtone);
+  margin-bottom:.5em;
+  background-color: var(--shadow);
+}
+
+div.item {
+width: 50%;
+float: left;
+border: 1px solid var(--midtone);
+margin-bottom: .5em;
+background-color: var(--shadow);
+}
+
+/*div.item:nth-child(2) {
+  margin-right: 0;
+}
+*/
+
+/*section#tech-portfolio {
+  flex:1;
+}*/
+
+
+footer {
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  text-align: center;
+  background-image: url("universe-bg.JPG");
+  background: #13293d;
+  color: #fff;
+  margin-top: auto;
+}
+
+.products {
+  flex: 1;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--curved);
+  padding: 10px;
+  flex: 0 0 300px;
+  transform: rotate(8deg);
+  box-shadow: 10px 10px 5px #aaaaaa;
+  margin: 20px;
+}
+
+.card > header {
+  border-radius: var(--curved);
+  padding: 20px;
+}
+
+.card > p {
+  text-align: center;
+}
+
+.card > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
