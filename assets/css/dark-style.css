@@ -17,7 +17,7 @@ body {
 }
 
 #header-strip {
- background-image: url("dark-teal-bg.jpg");
+ background-image: url("../images/dark-teal-bg.jpg");
   background-color: var(--shadow);
   width: 100%;
   padding: 1em;
@@ -90,6 +90,10 @@ img {
   margin: 1em auto;
 }
 
+section#header-strip img {
+display:inline;
+}
+
 
 header {
   background: var(--midtone);
@@ -99,7 +103,7 @@ header {
 
 #nav1 {
   background-color: var(--midtone);
-  background-image: url("universe-bg.JPG");
+  background-image: url("../images/universe-bg.jpg");
   flex:1;
   border: 1px;
   padding: .75em;
@@ -119,14 +123,14 @@ header {
   width: 80%;
 }
 section#web-dev, section#automation {
-  background-image: url(brainHemispheres-gray-left.png);
+  background-image: url("../images/brainHemispheres-gray-left.png");
   background-position: 20em;
   background-repeat: no-repeat;
   background-size: 2em;
 }
 
   section#design, section#art {
-  background-image: url(brainHemispheres-color-right.png);
+  background-image: url("../images/brainHemispheres-color-right.png)";
   background-position: 5em;
   background-repeat: no-repeat;
   background-size: 2em;
@@ -156,7 +160,7 @@ section#hero {
   flex:2;
   display: flex;
   align-items: center;
-  background-image: url("black-bg.jpg");
+  background-image: url("../images/black-bg.jpg");
 }
 
 div.brain {
@@ -167,7 +171,7 @@ div.brain {
   flex:1;
   height: 348 px;
   width: 300 px;
-  background-image: url('profile-pic-composite-300.jpg');
+  background-image: url("../images/profile-pic-composite-300.jpg");
   background-repeat: no-repeat;
 }
 
@@ -180,16 +184,16 @@ vertical-align: middle;
 }
 
 div#right.brain:hover + div#my-avatar {
-  background-image: url('profile-pic-creative-300.jpg');
+  background-image: url("../images/profile-pic-creative-300.jpg");
 }
 
 div#left.brain:hover ~ div#my-avatar {
-  background-image: url('profile-pic-tech-300.jpg');
+  background-image: url("../images/profile-pic-tech-300.jpg");
 }
 
 #link-strip {
   display:block;
-  background-image: url("dark-teal-bg.jpg");
+  background-image: url("../images/dark-teal-bg.jpg");
 }
 
 #link-strip ul {
@@ -225,7 +229,7 @@ div#portfolio section {
   padding: 1em;
   border: 1px solid var(--highlight);
   min-height: 3em;
-  background-image: url("universe-bg.JPG");
+  background-image: url("../images/universe-bg.JPG");
   display: flexbox;
 }
 
