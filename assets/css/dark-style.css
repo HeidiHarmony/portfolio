@@ -32,7 +32,7 @@ h1 {
   margin-bottom: 1em;
 }
 
-h2 {
+h2 h3 {
   display: block;
   font-size: 1.25em;
   text-align: center;
@@ -40,12 +40,16 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  font-size: 1em;
+}
+
 #smaller {
   font-size: 1.25em;
   margin: 10px;
 }
 
-p, a {
+p, a, ul {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: .8em;
   margin: 2em;
@@ -54,7 +58,21 @@ p, a {
   vertical-align: center;
 }
 
-/*anchor tags*/
+p#quote {
+  font-style: italic;
+  font-size: 1em;
+}
+
+ul {
+  font-weight: bold;
+  margin: 0;
+}
+
+li {
+font-weight: normal;
+}
+
+/*general anchor tags*/
 
 /* unvisited link */
 a:link {
@@ -74,6 +92,29 @@ a:active {
   color: white;
   font-weight: 500;
 }
+
+/*Link Strip anchor tags*/
+
+section#link-strip a {
+  font-family: "panel-mono", monospace;
+  font-size: 1.25em;
+  color: var(--highlight);
+  text-decoration: none;
+}
+/* mouse over and selected links */
+li#about-link:hover, li#about-link:active, li#about-link:visited {
+  background: #511c24;
+}
+li#experience-link:hover, li#experience-link:active li#experience-link:visited  {
+  background: #007468;
+}
+li#education-link:hover, li#education-link:active, li#education-link:visited {
+  background: #124a7a;
+}
+li#contact-link:hover, li#contact-link:active, li#contact-link:visited  {
+  background: #21192b;
+}
+
 
 .italic {
   font-weight: 400;
@@ -123,14 +164,14 @@ header {
   width: 80%;
 }
 section#web-dev, section#automation {
-  background-image: url("../images/brainHemispheres-gray-left.png");
+  /*background-image: url("../images/brainHemispheres-gray-left.png"); */
   background-position: 20em;
   background-repeat: no-repeat;
   background-size: 2em;
 }
 
   section#design, section#art {
-  background-image: url("../images/brainHemispheres-color-right.png)";
+ /* background-image: url("../images/brainHemispheres-color-right.png");*/
   background-position: 5em;
   background-repeat: no-repeat;
   background-size: 2em;
@@ -152,9 +193,9 @@ section.nav-portfolio {
   text-align: center;
 }
 
-nav a:hover {
+/*nav a:hover {
   background-color: #fff;
-}
+}*/
 
 section#hero {
   flex:2;
@@ -192,17 +233,23 @@ div#left.brain:hover ~ div#my-avatar {
 }
 
 #link-strip {
-  display:block;
+  padding-top: .5em;
   background-image: url("../images/dark-teal-bg.jpg");
+  height: 4em;;
 }
 
 #link-strip ul {
-  padding: 1em;
+  padding: 0;
+  height: 100%;
+  vertical-align: center;
+  display: flex;
 }
 
-#link-strip li {
-  display: inline;
-  margin: 0 2em;
+#link-strip ul li {
+  flex: 1;
+  color: var(--highlight);
+  font-family: "panel-mono", monospace;
+  margin: .5em 4em 0 4em;
 }
 
 main {
@@ -212,7 +259,32 @@ main {
 }
 
 div#learn-more {
+  background-color: var(--midtone);
+  display: flex;
+  flex-direction: row;
+}
 
+div#learn-more section {
+  flex: 1;
+  margin: .5em;
+  color: var(--highlight);
+  border: 5 px solid var(--midtone);
+}
+
+section#about {
+  background-color: #511c24;
+}
+
+section#experience {
+  background-color: #007468;
+}
+
+section#education {
+  background-color:  #124a7a;
+}
+
+section#contact {
+  background-color:  #21192b;
 }
 
 div#portfolio {
@@ -230,11 +302,11 @@ div#portfolio section {
   border: 1px solid var(--highlight);
   min-height: 3em;
   background-image: url("../images/universe-bg.JPG");
-  display: flexbox;
+  display: flex;
 }
 
 div.mywork {
-  display:flexbox;
+  display:flex;
   Justify-content: space-between;
 }
 
@@ -253,16 +325,6 @@ margin-bottom: .5em;
 background-color: var(--shadow);
 }
 
-/*div.item:nth-child(2) {
-  margin-right: 0;
-}
-*/
-
-/*section#tech-portfolio {
-  flex:1;
-}*/
-
-
 footer {
   width: 100%;
   position:fixed;
@@ -274,42 +336,16 @@ footer {
   margin-top: auto;
 }
 
-.products {
-  flex: 1;
-  background-color: #fff;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.card {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: var(--curved);
-  padding: 10px;
-  flex: 0 0 300px;
-  transform: rotate(8deg);
-  box-shadow: 10px 10px 5px #aaaaaa;
-  margin: 20px;
-}
-
-.card > header {
-  border-radius: var(--curved);
-  padding: 20px;
-}
-
-.card > p {
-  text-align: center;
-}
-
-.card > img {
-  width: 100%;
-}
-
+/* Tablet width target */
 @media screen and (max-width: 768px) {
-  main,
-  nav {
-    flex-direction: column;
+  .card {
+    width: 50%;
+  }
+}
+
+/* Mobile width target */
+@media screen and (max-width: 585px) {
+  .card {
+    width: 50%;
   }
 }
